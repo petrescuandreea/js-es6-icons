@@ -120,7 +120,6 @@ let ico = document.getElementsByTagName("i");
 
 
 
-
 // STAMPA ELEMENTI IN PAGINA
 // for (let i = 0; i < icons.length; i++) {
 // 	const {name, prefix, type, family, color} = icons[i];
@@ -142,6 +141,21 @@ icons.forEach((icon) => {
 			<span>${icon.name}</span>
 		</div>
 	`;
+
+	
+	// IMPOSTO COLORE ICONE 
+	if(icons.type === "animal" ) {
+		// ico.classList.add("orange-icon");
+		ico.style.color ="orange";
+		
+	} else if (icons.type === "vegetable") {
+		// ico.classList.add("green-icon");
+		ico.style.color ="green";
+
+	} else {
+		// ico.classList.add("blue-icon");
+		ico.style.color ="blue";
+	}
 
 });
 
