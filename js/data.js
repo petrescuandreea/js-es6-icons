@@ -151,7 +151,7 @@ icons.forEach((icon) => {
 	iconsCont.innerHTML += `
 		<div class="icon-box">
 			<i class="${colorClass} ${icon.family} ${icon.prefix}${icon.name}"></i>
-			<span>${icon.name}</span>
+			<span style="text-transform:uppercase">${icon.name}</span>
 		</div>
 	`;
 });
