@@ -116,9 +116,6 @@ var icons = [
 
 // SELEZIONE DEGLI ELEMENTI UTILI 
 let iconsCont = document.getElementById("icons-container");
-let ico = document.getElementsByTagName("i");
-
-
 
 // STAMPA ELEMENTI IN PAGINA
 // for (let i = 0; i < icons.length; i++) {
@@ -135,28 +132,28 @@ let ico = document.getElementsByTagName("i");
 // STAMPA ELEMENTI IN PAGINA
 icons.forEach((icon) => {
 
-	iconsCont.innerHTML += `
-		<div class="icon-box">
-			<i class="${icon.family} ${icon.prefix}${icon.name}"></i>
-			<span>${icon.name}</span>
-		</div>
-	`;
+	// VARIABILE USATA PER IMPOSTARE IL COLORE 
+	let colorClass = '';
 
 	
 	// IMPOSTO COLORE ICONE 
-	if(icons.type === "animal" ) {
-		// ico.classList.add("orange-icon");
-		ico.style.color ="orange";
+	// Se la propietà type dellìoggetto è animal, il colore dell'icona sarà arancione 
+	if(icon.type === "animal" ) {
+		colorClass = "orange-icon";
 		
-	} else if (icons.type === "vegetable") {
-		// ico.classList.add("green-icon");
-		ico.style.color ="green";
-
-	} else {
-		// ico.classList.add("blue-icon");
-		ico.style.color ="blue";
+	} else if (icon.type === "vegetable") /*Se la propietà type dellìoggetto è vegetable, il colore dell'icona sarà verde*/ {
+		colorClass = "green-icon";
+	
+	} else /*In tutti gli altri casi l'icona sarà di colore blu*/ {
+		colorClass = "blue-icon";
 	}
 
+	iconsCont.innerHTML += `
+		<div class="icon-box">
+			<i class="${colorClass} ${icon.family} ${icon.prefix}${icon.name}"></i>
+			<span>${icon.name}</span>
+		</div>
+	`;
 });
 
 
