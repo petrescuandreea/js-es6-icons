@@ -116,19 +116,33 @@ var icons = [
 
 // SELEZIONE DEGLI ELEMENTI UTILI 
 let iconsCont = document.getElementById("icons-container");
+let ico = document.getElementsByTagName("i");
 
 
 
 
 // STAMPA ELEMENTI IN PAGINA
-for (let i = 0; i < icons.length; i++) {
-	const {name, prefix, type, family, color} = icons[i];
-	
+// for (let i = 0; i < icons.length; i++) {
+// 	const {name, prefix, type, family, color} = icons[i];
+
+// 	iconsCont.innerHTML += `
+// 		<div class="icon-box">
+// 			<i class="${family} ${prefix}${name}"></i>
+// 			<span>${name}</span>
+// 		</div>
+// 	`
+// }
+
+// STAMPA ELEMENTI IN PAGINA
+icons.forEach((icon) => {
+
 	iconsCont.innerHTML += `
 		<div class="icon-box">
-			<i class="${family} ${prefix}${name}"></i>
-			<span>${name}</span>
+			<i class="${icon.family} ${icon.prefix}${icon.name}"></i>
+			<span>${icon.name}</span>
 		</div>
-	`
+	`;
 
-}
+});
+
+
