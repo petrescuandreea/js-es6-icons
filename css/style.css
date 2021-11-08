@@ -1,0 +1,21 @@
+/* regole generali  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* icone  */
+
+.orange-icon {
+    color: orange;
+}
+
+.green-icon {
+    color: green;
+}
+
+.blue-icon {
+    color: blue;
+}
